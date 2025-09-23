@@ -15,6 +15,12 @@ const testimonios01 = '/landing/testimonios_01.png';
 const testimonios02 = '/landing/testimonios_02.png';
 const testimonios03 = '/landing/testimonios_03.png';
 
+const catalogo01 = '/landing/catalogo_01.jpg';
+const catalogo02 = '/landing/catalogo_02.png';
+const catalogo03 = '/landing/catalogo_03.png';
+const catalogo04 = '/landing/catalogo_04.png';
+const catalogo05 = '/landing/catalogo_05.jpg';
+
 const faqs01 = '/landing/faqs_01.png';
 const faqs02 = '/landing/faqs_02.png';
 const faqs03 = '/landing/faqs_03.png';
@@ -47,142 +53,208 @@ export default function Index() {
   const content = {
     hero: {
       banner: {
-        title: "¿Y si tu mejor inversión también fuera tu escape en la Riviera Maya?",
-        description: "Departamentos en preventa y propiedades de alta plusvalía en venta en Riviera Maya",
+        title: '¿Y si tu mejor inversión también fuera tu escape en la Riviera Maya?',
+        description: 'Departamentos en preventa y propiedades de alta plusvalía en venta en Riviera Maya',
       },
       content: {
-        paragraph: "Queremos que tengas una propiedad en la Riviera Maya donde puedas relajarte, escaparte cuando quieras y sentir que estás invirtiendo en algo con sentido. <br/><br/>Nada de estrés, nada de presiones. <br/><br/>Solo un espacio para ti.",
+        paragraph: 'Queremos que tengas una propiedad en la Riviera Maya donde puedas relajarte, escaparte cuando quieras y sentir que estás invirtiendo en algo con sentido. <br/><br/>Nada de estrés, nada de presiones. <br/><br/>Solo un espacio para ti.',
       },
       cta: {
         main: 'Agenda una llamada',
-        second: "Explora cómo sería tu vida en el mar"
-      }
+        second: 'Explora cómo sería tu vida en el mar',
+      },
+    },
+    catalogo: {
+      banner: {
+        title: "Nuestros desarrollos en preventa",
+      },
+      content: {
+        items: [
+          {
+            title: 'AKBAL',
+            location: 'Playa del Carmen',
+            type: 'Preventa',
+            due: 'Dic 2025',
+            units: '22',
+            price: '$2.4 MDP',
+            img: catalogo01,
+          },
+          {
+            title: 'Amanecer',
+            location: 'Playa del Carmen',
+            type: 'Preventa',
+            due: 'Dic 2025',
+            units: '9',
+            price: '$3.3 MDP',
+            img: catalogo02,
+          },
+          {
+            title: 'Cocay',
+            location: 'Tulum',
+            type: 'Preventa',
+            due: 'Dic 2025',
+            units: '9',
+            price: '$3 MDP',
+            img: catalogo03,
+          },
+          {
+            title: 'Constituyentes 80',
+            location: 'Playa del Carmen',
+            type: 'Preventa',
+            due: 'Mayo 2026',
+            units: '24',
+            price: '$1.8 MDP',
+            img: catalogo04,
+          },
+          {
+            title: 'Wolf Towers',
+            location: 'Cancún',
+            type: 'Preventa',
+            due: 'Enero 2026',
+            units: '121',
+            price: '$4.2 MDP',
+            img: catalogo05,
+          },
+        ],
+      },
     },
     beneficios: {
       banner: {
-        title: "Invertir o tener una segunda casa es más fácil y seguro de lo que crees",
+        title: 'Invertir o tener una segunda casa es más fácil y seguro de lo que crees',
       },
       content: {
-        paragraph: "Sabemos que hay mil opciones y muchas dudas. <br/><br/>Por eso te ayudamos a ver todo con calma, sin presiones, con claridad. <br/><br/>Tú decides si quieres mudarte o solo ir en vacaciones.",
+        paragraph: 'Sabemos que hay mil opciones y muchas dudas. <br/><br/>Por eso te ayudamos a ver todo con calma, sin presiones, con claridad. <br/><br/>Tú decides si quieres mudarte o solo ir en vacaciones.',
         items: [
-          { title: "Nuestras ubicaciones son TOP", description: "Los proyectos y propiedades que ofrecemos están en lugares con calidad de vida, plusvalía y tranquilidad.", img: beneficios01 },
-          { title: "Te acompañamos desde el principio", description: "Nosotros te acompañamos desde la búsqueda de tu propiedad y todo el proceso hasta que recibas tus llaves.", img: beneficios02 },
-          { title: "Propiedades con todo en regla", description: "No nos gusta meterte en problemas, por eso solo te vamos a mostrar propiedades revisadas por expertos legales.", img: beneficios03 }
+          {
+            title: 'Nuestras ubicaciones son TOP',
+            description: 'Los proyectos y propiedades que ofrecemos están en lugares con calidad de vida, plusvalía y tranquilidad.',
+            img: beneficios01,
+          },
+          {
+            title: 'Te acompañamos desde el principio',
+            description: 'Nosotros te acompañamos desde la búsqueda de tu propiedad y todo el proceso hasta que recibas tus llaves.',
+            img: beneficios02,
+          },
+          {
+            title: 'Propiedades con todo en regla',
+            description: 'No nos gusta meterte en problemas, por eso solo te vamos a mostrar propiedades revisadas por expertos legales.',
+            img: beneficios03,
+          },
         ],
       },
       cta: {
-        main: "Agenda tu asesoría estratégica gratuita"
-      }
+        main: 'Agenda tu asesoría estratégica gratuita',
+      },
     },
     atributos: {
       banner: {
-        title: "No somos una comercializadora, somos un concierge inmobiliario",
+        title: 'No somos una comercializadora, somos un concierge inmobiliario',
       },
       content: {
-        paragraph: "Hacemos esto para que estés seguro de que tomaste una buena decisión: vemos qué te conviene, te conectamos con aliados y resolvemos todas tus dudas.",
+        paragraph: 'Hacemos esto para que estés seguro de que tomaste una buena decisión: vemos qué te conviene, te conectamos con aliados y resolvemos todas tus dudas.',
         items: [
           {
-            title: "Nos cuentas que propiedad estás buscando",
-            description: "Primero nos interesa conocer tus metas para encontrar la propiedad perfecta para ti.",
-            img: atributos01
+            title: 'Nos cuentas que propiedad estás buscando',
+            description: 'Primero nos interesa conocer tus metas para encontrar la propiedad perfecta para ti.',
+            img: atributos01,
           },
           {
-            title: "Seleccionas el tipo de proyecto que va contigo",
-            description: "Checamos opciones según tu estilo de vida, presupuesto y objetivos.",
-            img: atributos02
+            title: 'Seleccionas el tipo de proyecto que va contigo',
+            description: 'Checamos opciones según tu estilo de vida, presupuesto y objetivos.',
+            img: atributos02,
           },
           {
-            title: "Nos delegas búsqueda y trámites",
-            description: "Buscamos, negociamos y te mandamos todo lo necesario para que tomes una buena decisión desde donde estés.",
-            img: atributos03
+            title: 'Nos delegas búsqueda y trámites',
+            description: 'Buscamos, negociamos y te mandamos todo lo necesario para que tomes una buena decisión desde donde estés.',
+            img: atributos03,
           },
           {
-            title: "Recibes las llaves de tu nueva propiedad",
-            description: "Ya en este último paso si es necesario que vengas para poder entregarte tus llaves.",
-            img: atributos04
-          }
+            title: 'Recibes las llaves de tu nueva propiedad',
+            description: 'Ya en este último paso si es necesario que vengas para poder entregarte tus llaves.',
+            img: atributos04,
+          },
         ],
       },
       cta: {
-        main: "Clic aquí para conocer las opciones que tenemos para ti"
-      }
+        main: 'Clic aquí para conocer las opciones que tenemos para ti',
+      },
     },
     testimonios: {
       banner: {
-        title: "Lo que dicen quienes ya confiaron en nosotros",
+        title: 'Lo que dicen quienes ya confiaron en nosotros',
       },
       content: {
         items: [
           {
-            title: "Marcela L., Monterrey",
-            description: "“Cerré todo desde Canadá sin estrés. Sentí que tenía un equipo local cuidando mis intereses.”",
-            img: testimonios01
+            title: 'Marcela L., Monterrey',
+            description: '“Cerré todo desde Canadá sin estrés. Sentí que tenía un equipo local cuidando mis intereses.”',
+            img: testimonios01,
           },
           {
-            title: "Gabriel y Anya, Canadá",
-            description: "“Queríamos un lugar para pasar inviernos fuera del ruido. Soulmate Realtors lo hizo realidad y nos ayudó con todo.”",
-            img: testimonios02
+            title: 'Gabriel y Anya, Canadá',
+            description: '“Queríamos un lugar para pasar inviernos fuera del ruido. Soulmate Realtors lo hizo realidad y nos ayudó con todo.”',
+            img: testimonios02,
           },
           {
-            title: "Roberto y Sofía, CDMX",
-            description: "“Ahora tenemos un departamento donde escaparnos un mes al año, y lo rentamos cuando no lo usamos. Sin complicaciones.”",
-            img: testimonios03
-          }
+            title: 'Roberto y Sofía, CDMX',
+            description: '“Ahora tenemos un departamento donde escaparnos un mes al año, y lo rentamos cuando no lo usamos. Sin complicaciones.”',
+            img: testimonios03,
+          },
         ],
       },
       cta: {
-        main: "Agenda tu asesoría estratégica gratuita"
-      }
+        main: 'Agenda tu asesoría estratégica gratuita',
+      },
     },
     faqs: {
       banner: {
-        title: "¿Dudas sobre tu nueva propiedad?",
+        title: '¿Dudas sobre tu nueva propiedad?',
       },
       content: {
         items: [
           {
-            q: "¿Puedo comprar desde el extranjero?",
-            a: "Sí. La mayoría de nuestros clientes no viven en Riviera Maya. Así que no te preocupes, te ayudamos en todo momento.",
-            img: faqs01
+            q: '¿Puedo comprar desde el extranjero?',
+            a: 'Sí. La mayoría de nuestros clientes no viven en Riviera Maya. Así que no te preocupes, te ayudamos en todo momento.',
+            img: faqs01,
           },
           {
-            q: "¿Cómo sé que una propiedad es segura?",
-            a: "Solo trabajamos con opciones que han sido revisadas legalmente por notarios y especialistas.",
-            img: faqs02
+            q: '¿Cómo sé que una propiedad es segura?',
+            a: 'Solo trabajamos con opciones que han sido revisadas legalmente por notarios y especialistas.',
+            img: faqs02,
           },
           {
-            q: "¿Y si la quiero rentar cuando no la use?",
-            a: "Podemos conectarte con aliados que te ayudan a rentarla por estancias cortas, temporadas o a largo plazo.",
-            img: faqs03
+            q: '¿Y si la quiero rentar cuando no la use?',
+            a: 'Podemos conectarte con aliados que te ayudan a rentarla por estancias cortas, temporadas o a largo plazo.',
+            img: faqs03,
           },
           {
-            q: "¿Qué sigue después de elegir la propiedad?",
-            a: "Te guiamos en tu compra con el contrato, firma y entrega.",
-            img: faqs04
+            q: '¿Qué sigue después de elegir la propiedad?',
+            a: 'Te guiamos en tu compra con el contrato, firma y entrega.',
+            img: faqs04,
           },
           {
-            q: "¿Qué zonas recomiendan para segunda residencia?",
-            a: "Te mostramos zonas seguras, tranquilas y con buena proyección, según tu estilo de vida.",
-            img: faqs05
-          }
+            q: '¿Qué zonas recomiendan para segunda residencia?',
+            a: 'Te mostramos zonas seguras, tranquilas y con buena proyección, según tu estilo de vida.',
+            img: faqs05,
+          },
         ],
       },
       cta: {
-        main: "Agenda tu asesoría estratégica gratuita"
-      }
+        main: 'Agenda tu asesoría estratégica gratuita',
+      },
     },
     cta: {
       banner: {
-        title: "Agenda tu sesión de inversión inmobiliaria personalizada.",
+        title: 'Agenda tu sesión de inversión inmobiliaria personalizada.',
       },
       content: {
-        paragraph: 'Ya le dedicaste al menos 5 minutos de tu valioso tiempo a leer todo esto. <br/><br/>Ayúdanos con tus datos y a responder 5 preguntas para agendar tu sesión estratégica.'
+        paragraph: 'Ya le dedicaste al menos 5 minutos de tu valioso tiempo a leer todo esto. <br/><br/>Ayúdanos con tus datos y a responder 5 preguntas para agendar tu sesión estratégica.',
       },
       cta: {
-        main: "Clic aquí si estás listo para dar el siguiente paso"
-      }
-    }
-  }
+        main: 'Clic aquí si estás listo para dar el siguiente paso',
+      },
+    },
+  };
 
   const {hero, beneficios, atributos, catalogo, garantias, testimonios, faqs, cta} = content;
 
@@ -226,7 +298,7 @@ export default function Index() {
           title={beneficios.banner.title}
           description={beneficios.banner.description}
         />
-        <div className="container mb-40">
+        <div className="container mb-20">
           <p className="reading-container ft-2 m-20" dangerouslySetInnerHTML={{__html: beneficios.content?.paragraph}}/>
           <div className="grid lg:grid-cols-3 gap-8 items-stretch">
             {beneficios.content.items.map((i, idx) =>
@@ -248,35 +320,51 @@ export default function Index() {
               </div>,
             )}
           </div>
+
+          <div className="flex flex-col justify-start md:justify-center items-start md:items-center mt-20">
+            <Link href="#contact">
+              <a onClick={() => setLastClick('benefits')} className="button mb-4">{hero.cta.main ?? 'Contáctanos'}</a>
+            </Link>
+            <p className="-ft-1">{hero.cta.second}</p>
+          </div>
         </div>
       </section>
 
       {catalogo != null &&
-        <section id="catalogo">
-          <Blockbuster
-            background={`bg-[url('/landing/catalogo.png')]`}
-            title={catalogo.banner.title}
-            description={catalogo.banner.description}
-          />
-          <div className="container my-40">
-            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-16 items-stretch">
-              <div className="flex flex-col bg-yellow-400 border-2 border-yellow-500 rounded-3xl w-full gap-8 p-8">
-                <p className="ft-2 font-semibold">{catalogo.content.paragraph}</p>
+        <section id="catalogo" className="border-t">
+          {/*<Blockbuster*/}
+          {/*  background={`bg-[url('/landing/catalogo.png')]`}*/}
+          {/*  title={catalogo.banner.title}*/}
+          {/*  description={catalogo.banner.description}*/}
+          {/*/>*/}
+          <div className="my-40 px-16">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 items-stretch">
+              <div className="xl:hidden relative w-full rounded-3xl overflow-hidden shadow-lg p-12">
+                <div className="absolute inset-0 bg-neutral-800/60 z-10"/>
+                <Image src={catalogo01} layout="fill" objectFit="cover" />
+                <h3 className="relative ft-6 text-white z-50">{catalogo.banner.title}</h3>
               </div>
               {catalogo.content.items.map((i, idx) =>
-                <div className="flex flex-col w-full gap-4">
+                <div className="relative flex flex-col w-full gap-4">
                   <div>
-                    <div className="relative bg-yellow-400 border border-yellow-500 rounded-3xl shadow-md">
-                      <h3 className="ft-0 p-8 text-center">
-                        {i.title}
-                      </h3>
+                    <div className="relative rounded-3xl shadow-md w-full aspect-square overflow-hidden">
+                      <Image src={i.img} layout="fill" objectFit="cover"/>
                     </div>
                   </div>
-                  <div className="flex flex-col border border-neutral-800 rounded-3xl pt-20 p-8 flex-grow gap-4">
-                    <p>{i.description}</p>
-                    <ul className="flex-grow">{i.specs.map(s => <li>— {s}</li>)}</ul>
+                  <div className="flex flex-col shadow-lg border rounded-3xl p-8 flex-grow gap-4">
+                    <h3 className="ft-2">{i.title}</h3>
+                    <p>{i.location}</p>
                     <p
-                      className="ft-2 font-semibold mt-20 p-4 rounded-2xl bg-yellow-400 text-center shadow-md">{i.price}</p>
+                      className="absolute top-8 shadow-lg bg-brand-1 uppercase font-semibold tracking-wider -ft-1 w-max px-4 py-1 rounded-md">{i.type}</p>
+                    <hr/>
+                    <p className="flex justify-between">Entrega: <span>{i.due}</span></p>
+                    <p className="flex justify-between">Unidades: <span>{i.units}</span></p>
+                    <p className="flex justify-between">Unidades: <span>{i.price}</span></p>
+                    <hr/>
+                    <Link href="#contact">
+                      <a onClick={() => setLastClick('benefits')}
+                         className="button !w-full mb-4">{hero.cta.main ?? 'Contáctanos'}</a>
+                    </Link>
                   </div>
                 </div>,
               )}
@@ -329,7 +417,7 @@ export default function Index() {
                 <p className="ft-0 text-green-700 text-right">
                   {i.title}
                 </p>
-              </div>
+              </div>,
             )}
           </div>
         </div>
@@ -337,31 +425,31 @@ export default function Index() {
 
       {/* GARANTIAS */}
       {garantias != null &&
-      <section id="garantias">
-        <Blockbuster
-          background={`bg-[url('/landing/garantias.png')]`}
-          title={garantias.banner.title}
-          description={garantias.banner.description}
-        />
-        <div className="container my-40">
-          <div className="grid md:grid-cols-3 gap-16 items-stretch">
-            {garantias.content.items.map((i, idx) =>
-              <div className="flex md:flex-col items-center md:justify-start gap-12">
-                <div
-                  className="bg-yellow-400 border-2 border-yellow-500 w-1/4 md:h-[16rem] md:w-[16rem] rounded-full overflow-hidden p-6 md:p-12">
-                  <div className="relative w-full pt-[100%]">
-                    <Image src={i.img} layout="fill" objectFit="contain"/>
+        <section id="garantias">
+          <Blockbuster
+            background={`bg-[url('/landing/garantias.png')]`}
+            title={garantias.banner.title}
+            description={garantias.banner.description}
+          />
+          <div className="container my-40">
+            <div className="grid md:grid-cols-3 gap-16 items-stretch">
+              {garantias.content.items.map((i, idx) =>
+                <div className="flex md:flex-col items-center md:justify-start gap-12">
+                  <div
+                    className="bg-yellow-400 border-2 border-yellow-500 w-1/4 md:h-[16rem] md:w-[16rem] rounded-full overflow-hidden p-6 md:p-12">
+                    <div className="relative w-full pt-[100%]">
+                      <Image src={i.img} layout="fill" objectFit="contain"/>
+                    </div>
                   </div>
-                </div>
-                <div className="relative w-3/4 md:w-full flex flex-col flex-grow p-12 border-2 rounded-3xl shadow-md">
-                  <h3>{i.title}</h3>
-                  <p>{i.description}</p>
-                </div>
-              </div>
-            )}
+                  <div className="relative w-3/4 md:w-full flex flex-col flex-grow p-12 border-2 rounded-3xl shadow-md">
+                    <h3>{i.title}</h3>
+                    <p>{i.description}</p>
+                  </div>
+                </div>,
+              )}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
       }
 
       {/* FAQS */}
@@ -377,7 +465,8 @@ export default function Index() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="border-t-4 border-brand-1 bg-[url('/landing/bg.jpg')] bg-brand-2 bg-center bg-cover py-20">
+      <section id="contact"
+               className="border-t-4 border-brand-1 bg-[url('/landing/bg.jpg')] bg-brand-2 bg-center bg-cover py-20">
         <div className="container">
           <div className="w-full md:w-1/2 mx-auto">
             <h2 className="!font-bold text-neutral-900">
@@ -385,7 +474,7 @@ export default function Index() {
             </h2>
             <div className="mt-20 mb-12">
               <p className="ft-1 font-semibold text-neutral-900">{cta.banner.description}</p>
-              <p className="ft-1 text-neutral-900" dangerouslySetInnerHTML={{__html:cta.content.paragraph}}/>
+              <p className="ft-1 text-neutral-900" dangerouslySetInnerHTML={{__html: cta.content.paragraph}}/>
             </div>
             <OptInForm
               lastClick={lastClick}
