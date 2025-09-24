@@ -332,11 +332,6 @@ export default function Index() {
 
       {catalogo != null &&
         <section id="catalogo" className="border-t">
-          {/*<Blockbuster*/}
-          {/*  background={`bg-[url('/landing/catalogo.png')]`}*/}
-          {/*  title={catalogo.banner.title}*/}
-          {/*  description={catalogo.banner.description}*/}
-          {/*/>*/}
           <div className="my-40 px-16">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 items-stretch">
               <div className="xl:hidden relative w-full rounded-3xl overflow-hidden shadow-lg p-12">
@@ -362,7 +357,7 @@ export default function Index() {
                     <p className="flex justify-between">Unidades: <span>{i.price}</span></p>
                     <hr/>
                     <Link href="#contact">
-                      <a onClick={() => setLastClick('benefits')}
+                      <a onClick={() => setLastClick('catalogo')}
                          className="button !w-full mb-4">{hero.cta.main ?? 'Contáctanos'}</a>
                     </Link>
                   </div>
@@ -398,6 +393,12 @@ export default function Index() {
               </div>,
             )}
           </div>
+          <div className="flex flex-col justify-start md:justify-center items-start md:items-center mt-20">
+            <Link href="#contact">
+              <a onClick={() => setLastClick('atributos')} className="button mb-4">{hero.cta.main ?? 'Contáctanos'}</a>
+            </Link>
+            <p className="-ft-1">{hero.cta.second}</p>
+          </div>
         </div>
       </section>
 
@@ -419,6 +420,12 @@ export default function Index() {
                 </p>
               </div>,
             )}
+          </div>
+          <div className="flex flex-col justify-start md:justify-center items-start md:items-center mt-20">
+            <Link href="#contact">
+              <a onClick={() => setLastClick('testimonios')} className="button mb-4">{hero.cta.main ?? 'Contáctanos'}</a>
+            </Link>
+            <p className="-ft-1">{hero.cta.second}</p>
           </div>
         </div>
       </section>
@@ -447,6 +454,12 @@ export default function Index() {
                   </div>
                 </div>,
               )}
+            </div>
+            <div className="flex flex-col justify-start md:justify-center items-start md:items-center mt-20">
+              <Link href="#contact">
+                <a onClick={() => setLastClick('garantias')} className="button mb-4">{hero.cta.main ?? 'Contáctanos'}</a>
+              </Link>
+              <p className="-ft-1">{hero.cta.second}</p>
             </div>
           </div>
         </section>

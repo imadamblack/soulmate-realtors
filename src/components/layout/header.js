@@ -9,7 +9,7 @@ export default function Header() {
   const path = router.pathname;
   return (
     <header
-      className={`fixed top-0 ${path === '/survey' ? 'bg-transparent' : 'bg-brand-1'} backdrop-blur-lg w-screen shadow-lg ${path === '/survey' ? 'h-[4rem]' : 'h-[6rem]'} flex justify-center z-[99] hover:top-0`}
+      className={`fixed top-0 bg-brand-1 h-[6rem] backdrop-blur-lg w-screen shadow-lg flex justify-center z-[99] hover:top-0`}
     >
       <div className="flex items-center z-[10]">
         <div className="relative flex items-center h-[4rem] min-w-[24rem]">

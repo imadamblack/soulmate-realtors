@@ -8,7 +8,7 @@ export default function ThankYou() {
           ¡Gracias por registrarte!
         </h2>
         <p className="ft-4 text-center">
-          Muy pronto, uno de nuestros asesores se pondrá en contacto contigo para ayudarte con tus opciones de pallets.
+          Muy pronto, uno de nuestros asesores se pondrá en contacto contigo para ayudarte a encontrar tu próxima propiedad!
         </p>
         <div className="flex flex-col items-center justify-center gap-10">
           <a

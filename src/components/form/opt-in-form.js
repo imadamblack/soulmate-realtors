@@ -19,13 +19,14 @@ export default function OptInForm({lastClick = ''}) {
 
   const onSubmit = (data) => {
     setSending(true);
-    data.cleanPhone = '52' + data.phone.replace(/^(MX)?\+?(52)?\s?0?1?|\s|\(|\)|-|[a-zA-Z]/g, '');
+    data.cleanPhone = '521' + data.phone.replace(/^(MX)?\+?(52)?\s?0?1?|\s|\(|\)|-|[a-zA-Z]/g, '');
     data.origin = 'Notoriovs Landing';
     data.lastClick = lastClick;
 
     const _fbc = getCookie('_fbc');
     const _fbp = getCookie('_fbp');
-    const payload = {...data, _fbc, _fbp};
+    const dateAdded = new Date();
+    const payload = {...data, dateAdded, _fbc, _fbp};
 
     fetch(info.optInWebhook, {
       method: 'POST',
@@ -35,7 +36,15 @@ export default function OptInForm({lastClick = ''}) {
       },
     }).then((result) => result.json())
       // Send FB Event
-      .then(() => {
+      .then(({id}) => {
+        fbEvent(
+          'Lead',
+          {email: data.email, phone: data.phone, externalID: id},
+        );
+        setCookie('lead', {...data, id});
+        router.push(`/survey?id=${id}`);
+      })
+      .catch(() => {
         fbEvent(
           'Lead',
           {email: data.email, phone: data.phone, externalID: ''},
@@ -43,14 +52,6 @@ export default function OptInForm({lastClick = ''}) {
         setCookie('lead', {...data});
         router.push(`/thankyou`);
       })
-      // .catch(() => {
-      //   fbEvent(
-      //     'Lead',
-      //     {email: data.email, phone: data.phone, externalID: ''},
-      //   );
-      //   setCookie('lead', {...data});
-      //   router.push(`/thankyou`);
-      // })
   };
 
   return (
