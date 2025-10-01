@@ -265,7 +265,7 @@ export default function Index() {
         <div className="relative min-h-[32rem] flex-grow w-full md:absolute top-0 inset-x-0 bottom-1/2 md:bottom-0">
           <div
             className="w-full h-[16rem] md:h-[32rem] bottom-0 absolute bg-gradient-to-t from-brand-1 md:from-black md:via-black to-transparent md:opacity-60 z-10"/>
-          <Image src="/landing/hero.png" layout="fill" className="object-cover object-right"/>
+          <Image src="/landing/hero.jpg" layout="fill" className="object-cover object-right"/>
         </div>
 
         <div className="container min-h-[40rem] w-full text-left md:text-center text-white z-10 p-8">
@@ -294,7 +294,7 @@ export default function Index() {
       {/* BENEFICIOS */}
       <section id="beneficios">
         <Blockbuster
-          background={`bg-[url('/landing/beneficios.png')]`}
+          background={`bg-[url('/landing/beneficios.jpg')]`}
           title={beneficios.banner.title}
           description={beneficios.banner.description}
         />
@@ -370,7 +370,7 @@ export default function Index() {
       {/* ATRIBUTOS */}
       <section id="atributos">
         <Blockbuster
-          background={`bg-[url('/landing/atributos.png')]`}
+          background={`bg-[url('/landing/atributos.jpg')]`}
           title={atributos.banner.title}
           description={atributos.banner.description}
         />
@@ -405,7 +405,7 @@ export default function Index() {
       {/* TESTIMONIOS */}
       <section id="testimonios">
         <Blockbuster
-          background={`bg-[url('/landing/testimonios.png')]`}
+          background={`bg-[url('/landing/testimonios.jpg')]`}
           title={testimonios.banner.title}
           description={testimonios.banner.description}
         />
@@ -434,7 +434,7 @@ export default function Index() {
       {garantias != null &&
         <section id="garantias">
           <Blockbuster
-            background={`bg-[url('/landing/garantias.png')]`}
+            background={`bg-[url('/landing/garantias.jpg')]`}
             title={garantias.banner.title}
             description={garantias.banner.description}
           />
@@ -468,7 +468,7 @@ export default function Index() {
       {/* FAQS */}
       <section id="faqs">
         <Blockbuster
-          background={`bg-[url('/landing/faqs.png')]`}
+          background={`bg-[url('/landing/faqs.jpg')]`}
           title={faqs.banner.title}
           description={faqs.banner.description}
         />
