@@ -2,34 +2,34 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { info } from '../../info';
 
-const beneficios01 = '/landing/beneficios_01.png';
-const beneficios02 = '/landing/beneficios_02.png';
-const beneficios03 = '/landing/beneficios_03.png';
+const beneficios01 = '/landing/beneficios_01.jpg';
+const beneficios02 = '/landing/beneficios_02.jpg';
+const beneficios03 = '/landing/beneficios_03.jpg';
 
-const atributos01 = '/landing/atributos_01.png';
-const atributos02 = '/landing/atributos_02.png';
-const atributos03 = '/landing/atributos_03.png';
-const atributos04 = '/landing/atributos_04.png';
+const atributos01 = '/landing/atributos_01.jpg';
+const atributos02 = '/landing/atributos_02.jpg';
+const atributos03 = '/landing/atributos_03.jpg';
+const atributos04 = '/landing/atributos_04.jpg';
 
-const testimonios01 = '/landing/testimonios_01.png';
-const testimonios02 = '/landing/testimonios_02.png';
-const testimonios03 = '/landing/testimonios_03.png';
+const testimonios01 = '/landing/testimonios_01.jpg';
+const testimonios02 = '/landing/testimonios_02.jpg';
+const testimonios03 = '/landing/testimonios_03.jpg';
 
 const catalogo01 = '/landing/catalogo_01.jpg';
-const catalogo02 = '/landing/catalogo_02.png';
-const catalogo03 = '/landing/catalogo_03.png';
-const catalogo04 = '/landing/catalogo_04.png';
+const catalogo02 = '/landing/catalogo_02.jpg';
+const catalogo03 = '/landing/catalogo_03.jpg';
+const catalogo04 = '/landing/catalogo_04.jpg';
 const catalogo05 = '/landing/catalogo_05.jpg';
 
-const faqs01 = '/landing/faqs_01.png';
-const faqs02 = '/landing/faqs_02.png';
-const faqs03 = '/landing/faqs_03.png';
-const faqs04 = '/landing/faqs_04.png';
-const faqs05 = '/landing/faqs_05.png';
+const faqs01 = '/landing/faqs_01.jpg';
+const faqs02 = '/landing/faqs_02.jpg';
+const faqs03 = '/landing/faqs_03.jpg';
+const faqs04 = '/landing/faqs_04.jpg';
+const faqs05 = '/landing/faqs_05.jpg';
 
-const form01 = '/landing/form_01.png';
-const form02 = '/landing/form_02.png';
-const form03 = '/landing/form_03.png';
+const form01 = '/landing/form_01.jpg';
+const form02 = '/landing/form_02.jpg';
+const form03 = '/landing/form_03.jpg';
 
 import OptInForm from '../components/form/opt-in-form';
 import Link from 'next/link';
