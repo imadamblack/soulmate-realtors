@@ -35,11 +35,19 @@ import OptInForm from '../components/form/opt-in-form';
 import Link from 'next/link';
 import Blockbuster from '../components/blockbuster';
 import Faqs from '../components/faqs';
+import scrollDepth from '../utils/scrollDepth';
 
 export default function Index() {
   const [lastClick, setLastClick] = useState('');
   const [slide, setSlide] = useState(0);
   const trackRef = useRef(null);
+
+  useEffect(() => {
+    scrollDepth({
+      values: [25, 50, 75, 100],
+      callback: (value) => fbq('trackCustom', `Scroll Depth: ${value}`),
+    })
+  })
 
   const goToContact = (origin) => {
     setLastClick(origin);
@@ -291,6 +299,44 @@ export default function Index() {
         </div>
       </section>
 
+
+      {catalogo != null &&
+        <section id="catalogo" className="border-t">
+          <div className="my-40 px-16">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 items-stretch">
+              <div className="xl:hidden relative w-full rounded-3xl overflow-hidden shadow-lg p-12">
+                <div className="absolute inset-0 bg-neutral-800/60 z-10"/>
+                <Image src={catalogo01} layout="fill" objectFit="cover" />
+                <h3 className="relative ft-6 text-white z-50">{catalogo.banner.title}</h3>
+              </div>
+              {catalogo.content.items.map((i, idx) =>
+                <div className="relative flex flex-col w-full gap-4">
+                  <div>
+                    <div className="relative rounded-3xl shadow-md w-full aspect-square overflow-hidden">
+                      <Image src={i.img} layout="fill" objectFit="cover"/>
+                    </div>
+                  </div>
+                  <div className="flex flex-col shadow-lg border rounded-3xl p-8 flex-grow gap-4">
+                    <h3 className="ft-2">{i.title}</h3>
+                    <p>{i.location}</p>
+                    <p
+                      className="absolute top-8 shadow-lg bg-brand-1 uppercase font-semibold tracking-wider -ft-1 w-max px-4 py-1 rounded-md">{i.type}</p>
+                    <hr/>
+                    <p className="flex justify-between">Entrega: <span>{i.due}</span></p>
+                    <p className="flex justify-between">Unidades: <span>{i.units}</span></p>
+                    <p className="flex justify-between">Desde: <span>{i.price}</span></p>
+                    <hr/>
+                    <Link href="#contact">
+                      <a onClick={() => setLastClick('catalogo')}
+                         className="button !w-full mb-4">{hero.cta.main ?? 'Contáctanos'}</a>
+                    </Link>
+                  </div>
+                </div>,
+              )}
+            </div>
+          </div>
+        </section>}
+
       {/* BENEFICIOS */}
       <section id="beneficios">
         <Blockbuster
@@ -329,43 +375,6 @@ export default function Index() {
           </div>
         </div>
       </section>
-
-      {catalogo != null &&
-        <section id="catalogo" className="border-t">
-          <div className="my-40 px-16">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 items-stretch">
-              <div className="xl:hidden relative w-full rounded-3xl overflow-hidden shadow-lg p-12">
-                <div className="absolute inset-0 bg-neutral-800/60 z-10"/>
-                <Image src={catalogo01} layout="fill" objectFit="cover" />
-                <h3 className="relative ft-6 text-white z-50">{catalogo.banner.title}</h3>
-              </div>
-              {catalogo.content.items.map((i, idx) =>
-                <div className="relative flex flex-col w-full gap-4">
-                  <div>
-                    <div className="relative rounded-3xl shadow-md w-full aspect-square overflow-hidden">
-                      <Image src={i.img} layout="fill" objectFit="cover"/>
-                    </div>
-                  </div>
-                  <div className="flex flex-col shadow-lg border rounded-3xl p-8 flex-grow gap-4">
-                    <h3 className="ft-2">{i.title}</h3>
-                    <p>{i.location}</p>
-                    <p
-                      className="absolute top-8 shadow-lg bg-brand-1 uppercase font-semibold tracking-wider -ft-1 w-max px-4 py-1 rounded-md">{i.type}</p>
-                    <hr/>
-                    <p className="flex justify-between">Entrega: <span>{i.due}</span></p>
-                    <p className="flex justify-between">Unidades: <span>{i.units}</span></p>
-                    <p className="flex justify-between">Unidades: <span>{i.price}</span></p>
-                    <hr/>
-                    <Link href="#contact">
-                      <a onClick={() => setLastClick('catalogo')}
-                         className="button !w-full mb-4">{hero.cta.main ?? 'Contáctanos'}</a>
-                    </Link>
-                  </div>
-                </div>,
-              )}
-            </div>
-          </div>
-        </section>}
 
       {/* ATRIBUTOS */}
       <section id="atributos">
