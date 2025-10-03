@@ -272,8 +272,8 @@ export default function Index() {
       <section className="relative min-h-[72rem] w-full flex flex-col md:justify-end items-center bg-brand-1">
         <div className="relative min-h-[32rem] flex-grow w-full md:absolute top-0 inset-x-0 bottom-1/2 md:bottom-0">
           <div
-            className="w-full h-[16rem] md:h-[32rem] bottom-0 absolute bg-gradient-to-t from-brand-1 md:from-black md:via-black to-transparent md:opacity-60 z-10"/>
-          <Image src="/landing/hero.jpg" layout="fill" className="object-cover object-right"/>
+            className="w-full h-[4rem] md:h-[32rem] bottom-0 absolute bg-gradient-to-t from-brand-1 md:from-black md:via-black to-transparent md:opacity-60 z-10"/>
+          <Image src="/landing/hero_2.png" layout="fill" className="object-cover object-right"/>
         </div>
 
         <div className="container min-h-[40rem] w-full text-left md:text-center text-white z-10 p-8">
