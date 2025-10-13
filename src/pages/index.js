@@ -1,10 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { info } from '../../info';
-
-const beneficios01 = '/landing/beneficios_01.jpg';
-const beneficios02 = '/landing/beneficios_02.jpg';
-const beneficios03 = '/landing/beneficios_03.jpg';
 
 const atributos01 = '/landing/atributos_01.jpg';
 const atributos02 = '/landing/atributos_02.jpg';
@@ -27,10 +22,6 @@ const faqs03 = '/landing/faqs_03.jpg';
 const faqs04 = '/landing/faqs_04.jpg';
 const faqs05 = '/landing/faqs_05.jpg';
 
-const form01 = '/landing/form_01.jpg';
-const form02 = '/landing/form_02.jpg';
-const form03 = '/landing/form_03.jpg';
-
 import OptInForm from '../components/form/opt-in-form';
 import Link from 'next/link';
 import Blockbuster from '../components/blockbuster';
@@ -39,15 +30,13 @@ import scrollDepth from '../utils/scrollDepth';
 
 export default function Index() {
   const [lastClick, setLastClick] = useState('');
-  const [slide, setSlide] = useState(0);
-  const trackRef = useRef(null);
 
   useEffect(() => {
     scrollDepth({
       values: [25, 50, 75, 100],
       callback: (value) => fbq('trackCustom', `Scroll Depth: ${value}`),
-    })
-  })
+    });
+  });
 
   const goToContact = (origin) => {
     setLastClick(origin);
@@ -61,20 +50,23 @@ export default function Index() {
   const content = {
     hero: {
       banner: {
-        title: '¿Y si tu mejor inversión también fuera tu escape en la Riviera Maya?',
-        description: 'Departamentos en preventa y propiedades de alta plusvalía en venta en Riviera Maya',
+        title: 'Depas en preventa desde $1.8 MDP <br/> Riviera Maya 2025',
+        description: 'Airbnb-ready <br/> ROI proyectado 9–12% <br/> Entrega desde Dic 2025',
       },
       content: {
-        paragraph: 'Queremos que tengas una propiedad en la Riviera Maya donde puedas relajarte, escaparte cuando quieras y sentir que estás invirtiendo en algo con sentido. <br/><br/>Nada de estrés, nada de presiones. <br/><br/>Solo un espacio para ti.',
+        paragraph: '<h2>¿Qué recibes en esta sesión?</h2>' +
+          '<h3>Catálogo curado</h3> <p>Con 3–5 opciones que encajan con tu presupuesto y objetivo (inversión/segunda casa).</p>' +
+          '<h3>Datos técnicos</h3> <p>Por proyecto: precios <b>desde</b>, entrega, tipologías, amenidades esenciales.\n</p>' +
+          '<h3>Comparativo por zona</h3> <p> Playa del Carmen, Tulum, Cancún (ROI esperado, plusvalía, riesgos).\n</p>',
       },
       cta: {
-        main: 'Agenda una llamada',
-        second: 'Explora cómo sería tu vida en el mar',
+        main: 'Agenda tu sesión de inversión',
+        second: 'Conoce los proyectos que encajan con tu objetivo',
       },
     },
     catalogo: {
       banner: {
-        title: "Nuestros desarrollos en preventa",
+        title: 'Nuestros desarrollos en preventa',
       },
       content: {
         items: [
@@ -126,34 +118,34 @@ export default function Index() {
         ],
       },
     },
-    beneficios: {
-      banner: {
-        title: 'Invertir o tener una segunda casa es más fácil y seguro de lo que crees',
-      },
-      content: {
-        paragraph: 'Sabemos que hay mil opciones y muchas dudas. <br/><br/>Por eso te ayudamos a ver todo con calma, sin presiones, con claridad. <br/><br/>Tú decides si quieres mudarte o solo ir en vacaciones.',
-        items: [
-          {
-            title: 'Nuestras ubicaciones son TOP',
-            description: 'Los proyectos y propiedades que ofrecemos están en lugares con calidad de vida, plusvalía y tranquilidad.',
-            img: beneficios01,
-          },
-          {
-            title: 'Te acompañamos desde el principio',
-            description: 'Nosotros te acompañamos desde la búsqueda de tu propiedad y todo el proceso hasta que recibas tus llaves.',
-            img: beneficios02,
-          },
-          {
-            title: 'Propiedades con todo en regla',
-            description: 'No nos gusta meterte en problemas, por eso solo te vamos a mostrar propiedades revisadas por expertos legales.',
-            img: beneficios03,
-          },
-        ],
-      },
-      cta: {
-        main: 'Agenda tu asesoría estratégica gratuita',
-      },
-    },
+    // beneficios: {
+    //   banner: {
+    //     title: 'Invertir o tener una segunda casa es más fácil y seguro de lo que crees',
+    //   },
+    //   content: {
+    //     paragraph: 'Sabemos que hay mil opciones y muchas dudas. <br/><br/>Por eso te ayudamos a ver todo con calma, sin presiones, con claridad. <br/><br/>Tú decides si quieres mudarte o solo ir en vacaciones.',
+    //     items: [
+    //       {
+    //         title: 'Nuestras ubicaciones son TOP',
+    //         description: 'Los proyectos y propiedades que ofrecemos están en lugares con calidad de vida, plusvalía y tranquilidad.',
+    //         img: beneficios01,
+    //       },
+    //       {
+    //         title: 'Te acompañamos desde el principio',
+    //         description: 'Nosotros te acompañamos desde la búsqueda de tu propiedad y todo el proceso hasta que recibas tus llaves.',
+    //         img: beneficios02,
+    //       },
+    //       {
+    //         title: 'Propiedades con todo en regla',
+    //         description: 'No nos gusta meterte en problemas, por eso solo te vamos a mostrar propiedades revisadas por expertos legales.',
+    //         img: beneficios03,
+    //       },
+    //     ],
+    //   },
+    //   cta: {
+    //     main: 'Agenda tu asesoría estratégica gratuita',
+    //   },
+    // },
     atributos: {
       banner: {
         title: 'No somos una comercializadora, somos un concierge inmobiliario',
@@ -162,23 +154,23 @@ export default function Index() {
         paragraph: 'Hacemos esto para que estés seguro de que tomaste una buena decisión: vemos qué te conviene, te conectamos con aliados y resolvemos todas tus dudas.',
         items: [
           {
-            title: 'Nos cuentas que propiedad estás buscando',
-            description: 'Primero nos interesa conocer tus metas para encontrar la propiedad perfecta para ti.',
+            title: 'Concierge inmobiliario, no comercializadora',
+            description: 'Seleccionamos a la medida de tus objetivos de inversión o vivienda y nos encargamos de representarte ante el desarrollador o vendedor.',
             img: atributos01,
           },
           {
-            title: 'Seleccionas el tipo de proyecto que va contigo',
-            description: 'Checamos opciones según tu estilo de vida, presupuesto y objetivos.',
+            title: 'Seguridad jurídica',
+            description: 'No nos gusta meterte en problemas, por eso solo te vamos a mostrar propiedades revisadas por expertos legales.',
             img: atributos02,
           },
           {
-            title: 'Nos delegas búsqueda y trámites',
+            title: 'Acompañamiento completo',
             description: 'Buscamos, negociamos y te mandamos todo lo necesario para que tomes una buena decisión desde donde estés.',
             img: atributos03,
           },
           {
-            title: 'Recibes las llaves de tu nueva propiedad',
-            description: 'Ya en este último paso si es necesario que vengas para poder entregarte tus llaves.',
+            title: 'Operación incluida',
+            description: 'Ya en este último paso te conectamos con administración para Airbnb o renta tradicional.',
             img: atributos04,
           },
         ],
@@ -256,7 +248,7 @@ export default function Index() {
         title: 'Agenda tu sesión de inversión inmobiliaria personalizada.',
       },
       content: {
-        paragraph: 'Ya le dedicaste al menos 5 minutos de tu valioso tiempo a leer todo esto. <br/><br/>Ayúdanos con tus datos y a responder 5 preguntas para agendar tu sesión estratégica.',
+        paragraph: 'Ayúdanos con tus datos y a responder 5 preguntas para compartirte las 3 opciones de propiedades que se ajusten mejor a tus objetivos.',
       },
       cta: {
         main: 'Clic aquí si estás listo para dar el siguiente paso',
@@ -278,35 +270,43 @@ export default function Index() {
 
         <div className="container min-h-[40rem] w-full text-left md:text-center text-white z-10 p-8">
           <h1
-            className="md:w-2/3 md:mx-auto relative font-bold ft-11 text-white [text-shadow:_2px_2px_0_rgb(0_0_0_/_20%)]">
-            {hero.banner.title}
-          </h1>
-          <p className="ft-3 mt-16">{hero.banner.description}</p>
+            className="md:w-2/3 md:mx-auto relative font-bold ft-11 text-white [text-shadow:_2px_2px_0_rgb(0_0_0_/_20%)]"
+            dangerouslySetInnerHTML={{__html: hero.banner.title}}
+          />
+          <p className="ft-3 mt-16" dangerouslySetInnerHTML={{__html: hero.banner.description}}/>
 
           <div className="flex flex-col justify-start md:justify-center items-start md:items-center mt-20">
             <Link href="#contact">
-              <a onClick={() => setLastClick('benefits')} className="button mb-4">{hero.cta.main ?? 'Contáctanos'}</a>
+              <a onClick={() => setLastClick('hero')}
+                 className="button ft-2 border border-green-500 mb-4 shadow-lg">{hero.cta.main ?? 'Contáctanos'}</a>
             </Link>
-            <p className="-ft-1">{hero.cta.second}</p>
-            <p className="material-icons animate-bounce"><span className="ft-9">expand_more</span></p>
+            <p className="ft-0">{hero.cta.second}</p>
+            {/*<p className="material-icons animate-bounce"><span className="ft-9">expand_more</span></p>*/}
           </div>
         </div>
       </section>
 
-      <section className="py-40 bg-[url('/landing/bg.jpg')] bg-center bg-cover">
-        <div className="reading-container">
-          <p className="ft-2 font-semibold" dangerouslySetInnerHTML={{__html: hero.content.paragraph}}/>
+      <section className="py-20 bg-[url('/landing/bg.jpg')] bg-center bg-cover">
+        <div className="reading-container" dangerouslySetInnerHTML={{__html: hero.content.paragraph}}/>
+
+        <div className="reading-container mt-12">
+          <Link href="#contact">
+            <a onClick={() => setLastClick('promesa')}
+               className="button ft-2 border border-green-500 mb-4 shadow-lg">{hero.cta.main ?? 'Contáctanos'}</a>
+          </Link>
+          <p className="ft-0">{hero.cta.second}</p>
         </div>
+
       </section>
 
 
       {catalogo != null &&
         <section id="catalogo" className="border-t">
-          <div className="my-40 px-16">
+          <div className="my-20 px-16">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 items-stretch">
               <div className="xl:hidden relative w-full rounded-3xl overflow-hidden shadow-lg p-12">
-                <div className="absolute inset-0 bg-neutral-800/60 z-10"/>
-                <Image src={catalogo01} layout="fill" objectFit="cover" />
+                <div className="absolute inset-0 bg-brand-1 z-10"/>
+                {/*<Image src={catalogo01} layout="fill" objectFit="cover" />*/}
                 <h3 className="relative ft-6 text-white z-50">{catalogo.banner.title}</h3>
               </div>
               {catalogo.content.items.map((i, idx) =>
@@ -320,7 +320,7 @@ export default function Index() {
                     <h3 className="ft-2">{i.title}</h3>
                     <p>{i.location}</p>
                     <p
-                      className="absolute top-8 shadow-lg bg-brand-1 uppercase font-semibold tracking-wider -ft-1 w-max px-4 py-1 rounded-md">{i.type}</p>
+                      className="absolute top-8 shadow-lg bg-brand-1 uppercase font-semibold text-white tracking-wider -ft-1 w-max px-4 py-1 rounded-md">{i.type}</p>
                     <hr/>
                     <p className="flex justify-between">Entrega: <span>{i.due}</span></p>
                     <p className="flex justify-between">Unidades: <span>{i.units}</span></p>
@@ -338,43 +338,46 @@ export default function Index() {
         </section>}
 
       {/* BENEFICIOS */}
-      <section id="beneficios">
-        <Blockbuster
-          background={`bg-[url('/landing/beneficios.jpg')]`}
-          title={beneficios.banner.title}
-          description={beneficios.banner.description}
-        />
-        <div className="container mb-20">
-          <p className="reading-container ft-2 m-20" dangerouslySetInnerHTML={{__html: beneficios.content?.paragraph}}/>
-          <div className="grid lg:grid-cols-3 gap-8 items-stretch">
-            {beneficios.content.items.map((i, idx) =>
-              <div
-                id={`beneficio-${idx}`}
-                className="relative flex flex-col gap-8 w-full bg-white rounded-2xl shadow-lg overflow-hidden">
+      {beneficios != null &&
+        <section id="beneficios">
+          <Blockbuster
+            background={`bg-[url('/landing/beneficios.jpg')]`}
+            title={beneficios.banner.title}
+            description={beneficios.banner.description}
+          />
+          <div className="container mb-20">
+            <p className="reading-container ft-2 m-20"
+               dangerouslySetInnerHTML={{__html: beneficios.content?.paragraph}}/>
+            <div className="grid lg:grid-cols-3 gap-8 items-stretch">
+              {beneficios.content.items.map((i, idx) =>
+                <div
+                  id={`beneficio-${idx}`}
+                  className="relative flex flex-col gap-8 w-full bg-white rounded-2xl shadow-lg overflow-hidden">
 
-                <div className="w-full aspect-[16/9]">
-                  <div className="relative w-full h-full">
-                    <Image src={i.img} layout="fill" objectFit="cover"/>
+                  <div className="w-full aspect-[16/9]">
+                    <div className="relative w-full h-full">
+                      <Image src={i.img} layout="fill" objectFit="cover"/>
+                    </div>
                   </div>
-                </div>
 
-                <div className="p-20">
-                  <h3 className="ft-3 flex-grow">{i.title}</h3>
-                  <p className="ft-1">{i.description}</p>
-                </div>
+                  <div className="p-20">
+                    <h3 className="ft-3 flex-grow">{i.title}</h3>
+                    <p className="ft-1">{i.description}</p>
+                  </div>
 
-              </div>,
-            )}
+                </div>,
+              )}
+            </div>
+
+            <div className="flex flex-col justify-start md:justify-center items-start md:items-center mt-20">
+              <Link href="#contact">
+                <a onClick={() => setLastClick('beneficios')} className="button block mb-4">{hero.cta.main ?? 'Contáctanos'}</a>
+              </Link>
+              <p className="-ft-1">{hero.cta.second}</p>
+            </div>
           </div>
-
-          <div className="flex flex-col justify-start md:justify-center items-start md:items-center mt-20">
-            <Link href="#contact">
-              <a onClick={() => setLastClick('benefits')} className="button mb-4">{hero.cta.main ?? 'Contáctanos'}</a>
-            </Link>
-            <p className="-ft-1">{hero.cta.second}</p>
-          </div>
-        </div>
-      </section>
+        </section>
+      }
 
       {/* ATRIBUTOS */}
       <section id="atributos">
@@ -383,11 +386,11 @@ export default function Index() {
           title={atributos.banner.title}
           description={atributos.banner.description}
         />
-        <div className="px-16 mb-40">
+        <div className="px-16 my-20">
           <p className="reading-container ft-2 my-20" dangerouslySetInnerHTML={{__html: atributos.content?.paragraph}}/>
           <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-16 items-stretch">
             {atributos.content.items.map((i, idx) =>
-              <div className="flex flex-col w-full gap-4 bg-brand-1/60 rounded-2xl">
+              <div className="flex flex-col w-full pt-12 bg-brand-1/60 rounded-2xl">
                 <div className="relative pt-[100%]">
                   <div className="absolute inset-8 aspect-square rounded-full overflow-hidden z-10">
                     <Image src={i.img} layout="fill"/>
@@ -395,8 +398,8 @@ export default function Index() {
                   <div className="absolute top-[45%] w-full pt-12 bg-white"/>
                 </div>
 
-                <div className="flex flex-col py-20 px-8 flex-grow gap-4">
-                  <h3 className="ft-4 text-center">{i.title}</h3>
+                <div className="flex flex-col py-12 px-8 flex-grow">
+                  <h3 className="ft-5 text-center text-white">{i.title}</h3>
                   <p className="text-center">{i.description}</p>
                 </div>
               </div>,
@@ -418,10 +421,10 @@ export default function Index() {
           title={testimonios.banner.title}
           description={testimonios.banner.description}
         />
-        <div className="container my-40">
+        <div className="container my-20">
           <div className="grid md:grid-cols-3 gap-16 items-stretch">
             {testimonios.content.items.map((i, idx) =>
-              <div className="relative flex flex-col bg-brand-2 p-12 border border-yellow-500 rounded-3xl shadow-md">
+              <div className="relative flex flex-col bg-brand-2 p-12 pt-28 border border-yellow-500 rounded-3xl shadow-md">
                 <p className="!text-[16rem] text-brand-1 absolute -top-28 -left-2 material-icons">format_quote</p>
                 <p className="font-medium text-green-700 flex-grow my-20">{i.description}</p>
                 <p className="ft-0 text-green-700 text-right">
@@ -432,7 +435,8 @@ export default function Index() {
           </div>
           <div className="flex flex-col justify-start md:justify-center items-start md:items-center mt-20">
             <Link href="#contact">
-              <a onClick={() => setLastClick('testimonios')} className="button mb-4">{hero.cta.main ?? 'Contáctanos'}</a>
+              <a onClick={() => setLastClick('testimonios')}
+                 className="button mb-4">{hero.cta.main ?? 'Contáctanos'}</a>
             </Link>
             <p className="-ft-1">{hero.cta.second}</p>
           </div>
@@ -447,7 +451,7 @@ export default function Index() {
             title={garantias.banner.title}
             description={garantias.banner.description}
           />
-          <div className="container my-40">
+          <div className="container my-20">
             <div className="grid md:grid-cols-3 gap-16 items-stretch">
               {garantias.content.items.map((i, idx) =>
                 <div className="flex md:flex-col items-center md:justify-start gap-12">
@@ -466,7 +470,8 @@ export default function Index() {
             </div>
             <div className="flex flex-col justify-start md:justify-center items-start md:items-center mt-20">
               <Link href="#contact">
-                <a onClick={() => setLastClick('garantias')} className="button mb-4">{hero.cta.main ?? 'Contáctanos'}</a>
+                <a onClick={() => setLastClick('garantias')}
+                   className="button mb-4">{hero.cta.main ?? 'Contáctanos'}</a>
               </Link>
               <p className="-ft-1">{hero.cta.second}</p>
             </div>
@@ -481,7 +486,7 @@ export default function Index() {
           title={faqs.banner.title}
           description={faqs.banner.description}
         />
-        <div className="container my-40">
+        <div className="container my-20">
           <Faqs questions={faqs.content.items}/>
         </div>
       </section>

@@ -5,7 +5,7 @@ export default function Blockbuster({overhead, title, description, background}) 
   const bg = typeof background === 'object' ? 'bg-black' : background;
 
   return (
-    <section className={`relative flex flex-col justify-end min-h-[50dvh] w-screen md:mb-0 mx-auto pt-12 md:py-20 bg-center bg-cover ${bg}`}>
+    <section className={`relative flex flex-col justify-end min-h-[50vh] w-screen md:mb-0 mx-auto pt-12 md:py-20 bg-center bg-cover ${bg}`}>
       <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60 z-10"/>
 
       <div className="container mx-auto z-20">
